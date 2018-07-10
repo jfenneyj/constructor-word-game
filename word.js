@@ -28,3 +28,13 @@ word.prototype.findLetter = function(letter){
             }
         }
 };
+
+word.prototype.toString = function(){
+    var output = "";
+    for(var i = 0; i < this.letters.length; i++){
+        output += this.letters[i].printInfo();
+    }
+    return output;
+}
+
+module.exports.wordCons = word;
